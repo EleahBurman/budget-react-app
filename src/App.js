@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import BudgetCard from './components/BudgetCard';
 import './App.css';
 import AddBudgetModal from './components/AddBudgetModal';
+import AddExpenseModal from './components/AddExpenseModal.js';
 import { useState } from 'react';
 import { useBudgets } from './contexts/BudgetsContext';
 
@@ -37,7 +38,14 @@ function App() {
           })}
         </div>
       </Container>
-      <AddBudgetModal show={showAddBudgetModal} handleClose={()=>setShowAddBudgetModal(false)} /> 
+      <AddBudgetModal 
+        show={showAddBudgetModal} 
+        handleClose={()=>setShowAddBudgetModal(false)} 
+      />
+      <AddExpenseModal 
+        show={true} 
+        // handleClose={()=>setShowAddExpenseModal(false)} 
+      /> 
     </>
   )
 }
