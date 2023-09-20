@@ -14,9 +14,14 @@ function App() {
       display: "grid", 
       gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", 
       gap: "1rem", 
-      alignItems: "flex-start"}}
+      alignItems: "flex-start",
+    }}
     >
-      <BudgetCard name="Entertainment" amount={200} max={1000}>
+      <BudgetCard 
+        name="Entertainment"
+        gray
+        amount={1200} 
+        max={1000}>
 
       </BudgetCard>
     </div>
